@@ -1081,7 +1081,7 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid rgba($b, 0.2);
             &::before {
                 content: "";
                 @include posY;

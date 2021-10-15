@@ -1465,7 +1465,7 @@ legend {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .sec-bbs .lst-bbs li::before {
