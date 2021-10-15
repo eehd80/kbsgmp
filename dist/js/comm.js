@@ -62,34 +62,13 @@ $(function () {
     });
 
     // slick
-    // contTop
-    $(".slick-banner1").slick({
-        infinite: true,
-        // autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        arrows: false,
-    });
-
-    $(".slick-banner2").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
+    // 오늘의 표현
+    $(".slick-expression").slick({
         autoplay: true,
         autoplaySpeed: 2000,
-        responsive: [
-            {
-                breakpoint: 996,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
+        infinite: true,
+        vertical: true,
+        arrows: false,
     });
 
     // tab

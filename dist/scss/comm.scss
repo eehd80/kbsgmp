@@ -1,16 +1,9 @@
 @charset "UTF-8";
 @import "reset", "contents", "main", "variables", "mixin";
 
-@font-face {
-    font-family: "Cafe24SsurroundAir";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
 // layout
 .wrap {
-    padding-top: 80px;
+    // padding-top: 80px;
 }
 .container {
     display: block;
@@ -48,8 +41,11 @@
 }
 
 .sec-tit {
-    margin-bottom: 100px;
-    text-align: center;
+    margin-bottom: 20px;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: "Dongle-Regular", serif;
+    letter-spacing: -2px;
     span {
         display: inline-block;
         position: relative;
@@ -125,7 +121,7 @@
         padding-right: 12px;
         color: #373f57;
         font-size: 24px;
-        font-weight: bold;
+        font-weight: 300;
         letter-spacing: -1px;
         line-height: 20px;
         &:after {
@@ -180,10 +176,12 @@
     right: 0;
     z-index: 10000;
     height: 80px;
-    // background: $w;
-    // border-bottom: 1px solid $prim1;
-    // box-shadow: 0 4px 4px 0 rgba($b, 0.05);
+    background: $prim2;
     box-sizing: border-box;
+    &.sticky {
+        border-bottom: 1px solid $line1;
+        box-shadow: 0 4px 4px 0 rgba($b, 0.03);
+    }
     .wrap-header {
         display: flex;
         align-items: center;
@@ -215,6 +213,37 @@
             padding: 10px;
             font-size: 13px;
             color: #555;
+        }
+    }
+
+    .goto {
+        position: absolute;
+        top: 100px;
+        right: -150px;
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-color: #6c8cb5;
+            border: 1px solid #607da3;
+            font-size: 14px;
+            text-align: center;
+            color: $w;
+            box-shadow: 0 4px 4px 0 rgba($b, 0.1);
+            line-height: 1.2;
+        }
+        i {
+            margin: -2px 0 2px;
+            font-size: 24px;
         }
     }
 }
@@ -303,7 +332,7 @@
     color: #8491a7;
     font-size: 0;
     text-align: left;
-    background: #f4f6fa;
+    background: transparent;
     .inp_search {
         width: 95px;
         border: none;
@@ -643,12 +672,155 @@
 
 // contTop
 .cont-top {
-    background-color: #f8f3f0;
-    // background-image: linear-gradient(180deg, $w, #fffbfa);
+    padding-top: 80px;
+    // background-color: #f8f3f0;
+    background-image: linear-gradient(360deg, $w, $prim2);
     img {
         display: block;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+#main {
+    padding: 50px 0;
+}
+
+// 이달의 굿모닝팝스
+.sec-thismonth {
+    .sec-tit {
+        color: $prim1;
+    }
+    .lst-article {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            overflow: hidden;
+            width: 30%;
+            height: 430px;
+            margin-bottom: 50px;
+            // padding: 0 20px;
+        }
+        a {
+            display: block;
+        }
+        .arti-cover a {
+            display: block;
+            height: 430px;
+            padding: 10px;
+            // background-color: $line1;
+            background-color: $prim1;
+            img {
+                display: block;
+                width: 100%;
+                height: 410px;
+                margin: auto;
+                object-fit: cover;
+                object-position: 50% 0;
+            }
+        }
+
+        .arti-class {
+            display: block;
+            color: $prim1;
+            font-weight: 700;
+        }
+        .arti-thumb {
+            overflow: hidden;
+            position: relative;
+            height: 280px;
+            margin: 10px 0 20px;
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+                background-color: $b;
+                opacity: 0.5;
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+                transition: all 0.5s;
+            }
+        }
+        .arti-tit {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-bottom: 10px;
+            padding: 5px 20px;
+            font-size: 26px;
+            color: $w;
+            display: -webkit-box;
+            overflow: hidden;
+            max-height: 80px;
+            line-height: 40px;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    }
+}
+
+.sec-expression {
+    margin: 50px 0;
+    padding: 20px 0 5px;
+    border-top: 1px solid $prim3;
+    border-bottom: 1px solid $prim3;
+    background-color: $prim3;
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .sec-tit {
+        position: relative;
+        width: 300px;
+        color: $w;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 41px;
+            right: 60px;
+            width: 5px;
+            height: 35px;
+            background-color: $w;
+            border-radius: 3px;
+        }
+    }
+    .sec-cont {
+        width: calc(100% - 300px);
+    }
+    .slick-expression {
+        .slick-slide {
+            a {
+                display: block;
+                height: 150px;
+                padding-top: 20px;
+                font-size: 30px;
+            }
+            span {
+                display: block;
+                margin: -5px 20px 0 0;
+                font-size: 50px;
+                font-weight: 800;
+            }
+        }
     }
 }
 
@@ -657,9 +829,11 @@
     padding: 40px 0 50px;
     background: #1c293c;
     .container {
+        position: relative;
         display: flex;
         justify-content: space-between;
     }
+
     .f_mark {
         float: left;
         width: calc(100% - 350px);

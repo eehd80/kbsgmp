@@ -1,5 +1,14 @@
 /* reset */
 
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
+@font-face {
+    font-family: "Dongle-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body,
 div,
 dl,
@@ -137,8 +146,9 @@ textarea,
 button {
     font-size: calc(16px + 0.1vw);
     line-height: 1.5;
-    font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-family: "NanumSquare", "Malgun Gothic", "맑은 고딕", sans-serif;
     color: #111;
+    letter-spacing: -0.05em;
 }
 
 /* color값은 디자인가이드에 맞게사용 */
