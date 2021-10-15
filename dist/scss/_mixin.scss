@@ -46,6 +46,15 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
+@mixin ell3 {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 80px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
 
 @mixin img-g {
     display: inline-block;

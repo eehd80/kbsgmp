@@ -3,8 +3,8 @@
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 
 @font-face {
-    font-family: "Dongle-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff") format("woff");
+    font-family: "SeoulHangangM";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -277,17 +277,17 @@ legend {
     border-spacing: 0;
 }
 .pc {
-    display: block;
+    display: block !important;
 }
 .m {
-    display: none;
+    display: none !important;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 900px) {
     .pc {
-        display: none;
+        display: none !important;
     }
     .m {
-        display: block;
+        display: block !important;
     }
 }
 
